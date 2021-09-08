@@ -83,6 +83,16 @@ export default class Top5Controller {
         }
     }
 
+
+    //my first method for making delete work
+    myFunction(){
+        console.log("aaa")
+    }
+
+    tester(event){
+        document.getElementsByClassName("list-card-button").addEventListener("click", myFunction);
+    }
+
     ignoreParentClick(event) {
         event.cancelBubble = true;
         if (event.stopPropagation) event.stopPropagation();
