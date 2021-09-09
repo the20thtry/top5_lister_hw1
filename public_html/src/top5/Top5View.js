@@ -95,9 +95,11 @@ export default class Top5View {
 
     unhighlightList(listId) {
         // HIGHLIGHT THE LIST
-        let listCard = document.getElementById("top5-list-" + listId);
-        listCard.classList.add("unselected-list-card");
-        listCard.classList.remove("selected-list-card");
+        if(listCard!=null){
+            let listCard = document.getElementById("top5-list-" + listId);
+            listCard.classList.add("unselected-list-card");
+            listCard.classList.remove("selected-list-card");
+        }
     }
 
     updateToolbarButtons(model) {

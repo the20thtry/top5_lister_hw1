@@ -51,7 +51,8 @@ export default class Top5Model {
     }
 
     addNewList(initName, initItems) {
-        let newList = new Top5List(this.nextListId++);
+        //let newList = new Top5List(this.nextListId++); //This is the original im changing it to list.length
+        let newList = new Top5List(this.top5Lists.length)
         if (initName)
             newList.setName(initName);
         if (initItems)
